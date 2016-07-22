@@ -4,12 +4,12 @@ import random
 
 
 class ParettoDataset:
-    def __init__(self, ori_data, class_min_count=75, token_min_count=50, split=np.array([0.6, 0.8, 1.0]), tablesize=100000):
+    def __init__(self, ori_data, class_min_count=50, token_min_count=50, split=np.array([0.6, 0.8, 1.0]), tablesize=1000000):
         self.class_min_count = class_min_count
         self.token_min_count = token_min_count
         self.tablesize = tablesize
 
-        self.data = self.preprocess_data(ori_data, test=False)
+        self.data = self.preprocess_data(ori_data)
 
         random.shuffle(self.data)
 
@@ -17,7 +17,7 @@ class ParettoDataset:
         self.split_va = int(len(self.data) * split[1])
         self.split_tx = int(len(self.data) * split[2])
 
-    def preprocess_data(self, ori_data, test):
+    def preprocess_data(self, ori_data):
         unique_ac = list(set(ori_data['ac']))
 
         ac_list_useful = []
@@ -32,12 +32,7 @@ class ParettoDataset:
 
         tr_tx_data = []
         for (linenum, line) in ori_data.iterrows():
-
-            if test:
-                if line['ac'] == 'BLANK SCREEN' or line['ac'] == 'DISTORTED VIDEO':
-                    tr_tx_data.append((line['r'], line['ac']))
-            else:
-                if line['ac'] in ac_list_useful:
+            if line['ac'] in ac_list_useful:
                     tr_tx_data.append((line['r'], line['ac']))
 
         return tr_tx_data
@@ -88,7 +83,7 @@ class ParettoDataset:
         self.nTokens = len(self.tokens)
         self.tokens_list = tokens_list
 
-        print '[Info]: Word feature count: ', self.nTokens
+        print '[Info]: Word tokens count: ', self.nTokens
 
         return self.tokens
 

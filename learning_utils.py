@@ -3,8 +3,7 @@ import random
 import os.path as op
 import cPickle as pickle
 
-
-SAVE_PARAMS_EVERY = 1000
+SAVE_PARAMS_EVERY = 20000
 
 
 def load_saved_params():
@@ -29,12 +28,20 @@ def save_params(iter, params):
         pickle.dump(random.getstate(), f)
 
 
-def sgd(f, x0, step, iterations, postprocessing = None, useSaved = False, PRINT_EVERY=10):
+def save_params_final(iter, params, suffix):
+    filename = op.join('.', 'output', 'saved_params_'+str(iter)+'_'+str(suffix)+'.npy')
+    with open(filename, "w") as f:
+        pickle.dump(params, f)
+        pickle.dump(random.getstate(), f)
+
+
+def sgd(f, x0, step, iterations, suffix, postprocessing = None, useSaved = False, PRINT_EVERY=10):
     ANNEAL_EVERY = 20000
 
     if useSaved:
         start_iter, oldx, state = load_saved_params()
         if start_iter > 0:
+            print '[Status]: Loading params...'
             x0 = oldx
             step *= 0.5 ** (start_iter / ANNEAL_EVERY)
 
@@ -50,6 +57,8 @@ def sgd(f, x0, step, iterations, postprocessing = None, useSaved = False, PRINT_
 
     expcost = None
 
+    steps = []
+    steps.append(step)
     for iter in xrange(start_iter + 1, iterations + 1):
         cost = None
         cost, grad = f(x)
@@ -63,13 +72,20 @@ def sgd(f, x0, step, iterations, postprocessing = None, useSaved = False, PRINT_
             else:
                 # why this? 0.95 weight make more sense
                 expcost = .95 * expcost + .05 * cost
-            print "iter %d: %f" % (iter, expcost)
+            print "iter %d: cost = %f" % (iter, expcost), ' step = '+str(step)
 
         if iter % SAVE_PARAMS_EVERY == 0 and useSaved:
             save_params(iter, x)
 
+        if iter == 40001:
+            ANNEAL_EVERY /= 2
+
         if iter % ANNEAL_EVERY == 0:
             step *= 0.5
+            steps.append(step)
 
-    return x
+        if iter == iterations:
+            save_params_final(iter, x, suffix)
+
+    return x, expcost, steps
 

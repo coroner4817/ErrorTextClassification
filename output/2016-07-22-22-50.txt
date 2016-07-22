@@ -1,0 +1,13 @@
+date_time=2016-07-22-22-50
+cost_and_gradient=<function negSamplingCostAndGradient at 0x11102b668>
+dimVectors=15
+context=5
+sgd_step=[0.08, 0.04, 0.02, 0.01, 0.005]
+iterations=60000
+class_min_count=50
+token_min_count=50
+class_number=22
+total_tokens=1111
+freq_tokens_number=109
+table_size=1000000
+cost=9.01864919852

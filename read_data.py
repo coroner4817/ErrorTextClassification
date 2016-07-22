@@ -76,7 +76,7 @@ def get_data_from_file(file_name, _get_ac):
 def get_data_r_ac(data_folder, get_ac, read_cache=True):
 
     if read_cache and os.path.exists('./cache/data_r_ac.pkl'):
-        print 'Load data from cache...'
+        print '[Status]: Load data from cache...'
         return read_pickle('./cache/data_r_ac.pkl')
     else:
         frames = []
