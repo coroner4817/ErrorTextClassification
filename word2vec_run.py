@@ -2,16 +2,12 @@ import matplotlib.pyplot as plt
 from word2vec import *
 from learning_utils import *
 import datetime
-import os
+import os, glob
 
 
 def train_word2vec(dataset):
     random.seed(datetime.datetime.now())
-
     now_suffix = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
-
-    tokens = dataset.getTokens()
-    nWords = dataset.nTokens
 
     # dimVectors = len(dataset.useful_ac) if len(dataset.useful_ac) > 10 else 10
     dimVectors = 15
@@ -19,13 +15,36 @@ def train_word2vec(dataset):
     step = 0.08
     iterations = 60000
     CostAndGradient = negSamplingCostAndGradient
+    read_cache = True
+
+    nWords = 0
+    if glob.glob('./cache/saved_tokens_*.pkl') != [] and read_cache:
+        print '[Status]: Loading tokens...'
+        file = glob.glob('./cache/saved_tokens_*.pkl')
+        for fl in file:
+            with open (fl, 'rb') as handle:
+                    tokens = pickle.load(handle)
+                    nWords = len(tokens)
+            break
+        dataset.getTokens(load_prev=True, prev_tokens=tokens)
+    else:
+        tokens = dataset.getTokens(load_prev=False)
+        nWords = dataset.nTokens
+        with open('./cache/saved_tokens_'+ now_suffix + '.pkl', 'wb') as handle:
+            pickle.dump(tokens, handle)
+        with open('./output/saved_tokens_'+ now_suffix + '.pkl', 'wb') as handle:
+            pickle.dump(tokens, handle)
+
+    if nWords == 0:
+        print '[Debugging]: Get no tokens!'
+        sys.exit(1)
 
     wordVectors = np.concatenate(((np.random.rand(nWords, dimVectors) - .5) / \
         dimVectors, np.zeros((nWords, dimVectors))), axis=0)
 
     wordVectors0, cost, steps = sgd(
         lambda vec: word2vec_sgd_wrapper(skipgram, tokens, vec, dataset, C, CostAndGradient),
-        wordVectors, step, iterations, now_suffix, None, True, PRINT_EVERY=100)
+        wordVectors, step, iterations, now_suffix, None, read_cache, PRINT_EVERY=100)
 
     wordVectors = (wordVectors0[:nWords,:] + wordVectors0[nWords:,:])
 
@@ -41,7 +60,7 @@ def train_word2vec(dataset):
     visualize(visualizeWords, visualizeVecs, word_dir)
 
     train_info = ['date_time='+str(now_suffix)+'\n',
-                  'cost_and_gradient='+str(CostAndGradient)+'\n',
+                  'cost_and_gradient='+str(CostAndGradient.__name__)+'\n',
                   'dimVectors='+str(dimVectors)+'\n',
                   'context='+str(C)+'\n',
                   'sgd_step='+str(steps)+'\n',

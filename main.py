@@ -5,6 +5,7 @@ from word2vec_run import train_word2vec
 
 
 data_pd = get_data_r_ac(data_folder='data', get_ac=True, read_cache=True)
+
 dataset = ParettoDataset(data_pd)
 
 train_word2vec(dataset)

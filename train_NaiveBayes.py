@@ -12,8 +12,10 @@ def document_features(word_features, document):
 def train_NaiveBayes(dataset):
 
     tr_data = dataset.getTrainData()
+    va_data = dataset.getValidData()
+    tr_data += va_data
     tx_data = dataset.getTestData()
-    tokens = dataset.getTokens()
+    tokens = dataset.getTokens(load_prev=False)
     tr_word_features = dataset.tokens_list
     tr_feature_set = [(document_features(tr_word_features, d), c) for (d,c) in tr_data]
     tx_feature_set = [(document_features(tr_word_features, d), c) for (d,c) in tx_data]

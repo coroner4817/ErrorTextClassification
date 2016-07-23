@@ -12,7 +12,6 @@ def normalizeRows(x):
 
     return x
 
-
 def softmaxCostAndGradient(predicted, target, outputVectors, dataset):
     probabilities = softmax(predicted.dot(outputVectors.T))
     cost = -np.log(probabilities[target])

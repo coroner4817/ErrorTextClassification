@@ -1,6 +1,6 @@
 import numpy as np
 import nltk
-import random
+import random, glob, pickle
 
 
 class ParettoDataset:
@@ -46,15 +46,15 @@ class ParettoDataset:
     def getTestData(self):
         return self.data[self.split_va:self.split_tx]
 
-    def getTokens(self, filter_on=False):
+    def getTokens(self, load_prev, prev_tokens=None):
         if hasattr(self, "tokens") and self.tokens:
             return self.tokens
 
-        tr_data = self.getTrainData()
+        token_data = self.getTrainData()
 
         self.r_sentence = []
         all_tokens = []
-        for (r, ac) in tr_data:
+        for (r, ac) in token_data:
             tokens = nltk.word_tokenize(r)
             all_tokens += tokens
             self.r_sentence.append(tokens)
@@ -64,25 +64,20 @@ class ParettoDataset:
         fDict = nltk.FreqDist(all_tokens)
         self.freqDict = fDict
 
-        tokens_list = []
-        if filter_on:
-            for iWord in fDict.items():
-                if iWord[1] > self.token_min_count:
-                    tokens_list.append(iWord[0])
+        tokens_list = list(set(all_tokens))
 
-            for (word, tag) in nltk.pos_tag(tokens_list):
-                if tag == 'DT' or tag == 'IN' or tag == 'TO' or tag == 'MD' or tag == 'CC' or tag == 'CD':
-                    tokens_list.remove(word)
+        if load_prev:
+            self.tokens = prev_tokens
         else:
-            tokens_list = list(set(all_tokens))
+            self.tokens = dict()
+            for i in range(len(tokens_list)):
+                self.tokens[tokens_list[i]] = i
 
-        self.tokens = dict()
-        for i in range(len(tokens_list)):
-            self.tokens[tokens_list[i]] = i
+        self.tokens_list = []
+        for iDict in self.tokens:
+            self.tokens_list.append(iDict)
 
         self.nTokens = len(self.tokens)
-        self.tokens_list = tokens_list
-
         print '[Info]: Word tokens count: ', self.nTokens
 
         return self.tokens
@@ -108,9 +103,12 @@ class ParettoDataset:
 
         for i in xrange(self.nTokens):
             w = self.tokens_list[i]
-            freq = 1.0 * self.freqDict[w]
-            # Reweigh
-            rejectProb[i] = max(0, 1 - np.sqrt(threshold / freq))
+            if w in self.freqDict:
+                freq = 1.0 * self.freqDict[w]
+                # Reweigh
+                rejectProb[i] = max(0, 1 - np.sqrt(threshold / freq))
+            else:
+                rejectProb[i] = 0
 
         self._rejectProb = rejectProb
         return self._rejectProb
@@ -122,7 +120,7 @@ class ParettoDataset:
         rejectProb = self.getRejectProb()
 
         allsentences = [[w
-            for w in s
+            for w in s if w in self.tokens
             if 0 >= rejectProb[self.tokens[w]] or random.random() >= rejectProb[self.tokens[w]]]
             for s in self.r_sentence * 30]
 
@@ -142,9 +140,9 @@ class ParettoDataset:
             context += sent[wordID+1:min(len(sent), wordID + C + 1)]
 
         centerword = sent[wordID]
-        context = [w for w in context if w != centerword]
+        context = [w for w in context if w != centerword and w in self.tokens]
 
-        if len(context) > 0:
+        if len(context) > 0 and centerword in self.tokens:
             return centerword, context
         else:
             return self.getRandomContext(C)
