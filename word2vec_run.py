@@ -12,7 +12,9 @@ def train_word2vec(dataset):
     # dimVectors = len(dataset.useful_ac) if len(dataset.useful_ac) > 10 else 10
     dimVectors = 15
     C = 5
-    step = 0.08
+    update = 'nesterov'
+    step = 0.008
+    mu = 0.9
     iterations = 60000
     CostAndGradient = negSamplingCostAndGradient
     read_cache = True
@@ -48,9 +50,9 @@ def train_word2vec(dataset):
     wordVectors = np.concatenate(((np.random.rand(nWords, dimVectors) - .5) / \
         dimVectors, np.zeros((nWords, dimVectors))), axis=0)
 
-    wordVectors0, cost, steps = sgd(
+    wordVectors0, cost, steps, log_info = sgd(
         lambda vec: word2vec_sgd_wrapper(skipgram, tokens, vec, dataset, C, CostAndGradient),
-        wordVectors, step, iterations, now_suffix, None, read_cache, PRINT_EVERY=100)
+        wordVectors, step, mu, update, iterations, now_suffix, None, read_cache, PRINT_EVERY=100)
 
     wordVectors = (wordVectors0[:nWords,:] + wordVectors0[nWords:,:])
 
@@ -69,7 +71,9 @@ def train_word2vec(dataset):
                   'cost_and_gradient='+str(CostAndGradient.__name__)+'\n',
                   'dimVectors='+str(dimVectors)+'\n',
                   'context='+str(C)+'\n',
+                  'update_method='+str(update)+'\n',
                   'sgd_step='+str(steps)+'\n',
+                  'sgd_mu='+str(mu)+'\n',
                   'iterations='+str(iterations)+'\n',
                   'class_min_count='+str(dataset.class_min_count)+'\n',
                   'token_min_count='+str(dataset.token_min_count)+'\n',
@@ -78,6 +82,7 @@ def train_word2vec(dataset):
                   'freq_tokens_number='+str(len(visualizeWords))+'\n',
                   'table_size='+str(dataset.tablesize)+'\n',
                   'cost='+str(cost)+'\n']
+    train_info += log_info
 
     txt_info = os.path.join('.', 'output', str(now_suffix)+'.txt')
 

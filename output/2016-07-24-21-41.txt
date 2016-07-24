@@ -1,13 +1,16 @@
-date_time=2016-07-24-16-58
+date_time=2016-07-24-21-41
 cost_and_gradient=negSamplingCostAndGradient
 dimVectors=15
 context=5
-sgd_step=[0.08, 0.04, 0.02, 0.01, 0.005]
+update_method=nesterov
+sgd_step=[0.001]
+sgd_mu=0.9
 iterations=60000
 class_min_count=50
 token_min_count=50
 class_number=22
-total_tokens=1113
-freq_tokens_number=110
+total_tokens=1137
+freq_tokens_number=109
 table_size=1000000
-cost=9.42613665994
+cost=None
+---------------

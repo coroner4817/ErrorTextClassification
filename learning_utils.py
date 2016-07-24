@@ -2,6 +2,8 @@ import glob
 import random
 import os.path as op
 import cPickle as pickle
+import numpy as np
+
 
 SAVE_PARAMS_EVERY = 20000
 
@@ -35,7 +37,7 @@ def save_params_final(iter, params, suffix):
         pickle.dump(random.getstate(), f)
 
 
-def sgd(f, x0, step, iterations, suffix, postprocessing = None, useSaved = False, PRINT_EVERY=10):
+def sgd(f, x0, step, mu, update, iterations, suffix, postprocessing = None, useSaved = False, PRINT_EVERY=10):
     ANNEAL_EVERY = 20000
 
     if useSaved:
@@ -57,14 +59,32 @@ def sgd(f, x0, step, iterations, suffix, postprocessing = None, useSaved = False
 
     expcost = None
 
+    log_info = ['','---------------','']
+    v = 0
+    eps = 1e-5
     steps = []
     steps.append(step)
     for iter in xrange(start_iter + 1, iterations + 1):
         cost = None
         cost, grad = f(x)
-        x -= step * grad
 
-        x = postprocessing(x)
+        if update == 'sgd':
+            x -= step * grad
+
+        if update == 'momentum':
+            v = mu * v - step * grad
+            x += v
+
+        if update == 'nesterov':
+            v_prev = v
+            v = mu * v - step * grad
+            x += -mu * v_prev + (1 + mu) * v
+
+        if update == 'RMSprop':
+            v = mu * v + (1 - mu) * grad ** 2
+            x += - step * grad / (np.sqrt(v) + eps)
+
+        # x = postprocessing(x)
 
         if iter % PRINT_EVERY == 0:
             if not expcost:
@@ -72,7 +92,9 @@ def sgd(f, x0, step, iterations, suffix, postprocessing = None, useSaved = False
             else:
                 # why this? 0.95 weight make more sense
                 expcost = .95 * expcost + .05 * cost
-            print "iter %d: cost = %f" % (iter, expcost), ' step = '+str(step)
+            info = "iter %d: cost = %f" % (iter, expcost) + ' step = '+str(step)
+            print info
+            log_info.append(info)
 
         if iter % SAVE_PARAMS_EVERY == 0 and useSaved:
             save_params(iter, x)
@@ -87,5 +109,5 @@ def sgd(f, x0, step, iterations, suffix, postprocessing = None, useSaved = False
         if iter == iterations:
             save_params_final(iter, x, suffix)
 
-    return x, expcost, steps
+    return x, expcost, steps, log_info
 
