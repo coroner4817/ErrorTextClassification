@@ -1,6 +1,6 @@
 import numpy as np
 import nltk
-import random, glob, pickle
+import random
 
 
 class ParettoDataset:
@@ -46,7 +46,7 @@ class ParettoDataset:
     def getTestData(self):
         return self.data[self.split_va:self.split_tx]
 
-    def getTokens(self, load_prev, prev_tokens=None):
+    def getTokens(self, load_prev, prev_tokens=None, prev_token_list=[]):
         if hasattr(self, "tokens") and self.tokens:
             return self.tokens
 
@@ -68,19 +68,24 @@ class ParettoDataset:
 
         if load_prev:
             self.tokens = prev_tokens
+            self.tokens_list = prev_token_list
         else:
             self.tokens = dict()
             for i in range(len(tokens_list)):
                 self.tokens[tokens_list[i]] = i
+                self.tokens_list = tokens_list
 
-        self.tokens_list = []
-        for iDict in self.tokens:
-            self.tokens_list.append(iDict)
+        # self.tokens_list = []
+        # for iDict in self.tokens:
+        #     self.tokens_list.append(iDict)
 
         self.nTokens = len(self.tokens)
         print '[Info]: Word tokens count: ', self.nTokens
 
         return self.tokens
+
+    def getTokensList(self):
+        return self.tokens_list
 
     def getFreqTokens(self):
         freq_token = []

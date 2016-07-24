@@ -18,22 +18,28 @@ def train_word2vec(dataset):
     read_cache = True
 
     nWords = 0
+    tokens = None
+    tokensList = []
     if glob.glob('./cache/saved_tokens_*.pkl') != [] and read_cache:
         print '[Status]: Loading tokens...'
         file = glob.glob('./cache/saved_tokens_*.pkl')
         for fl in file:
             with open (fl, 'rb') as handle:
                     tokens = pickle.load(handle)
+                    tokensList = pickle.load(handle)
                     nWords = len(tokens)
             break
-        dataset.getTokens(load_prev=True, prev_tokens=tokens)
+        dataset.getTokens(load_prev=True, prev_tokens=tokens, prev_token_list=tokensList)
     else:
         tokens = dataset.getTokens(load_prev=False)
         nWords = dataset.nTokens
+        tokensList = dataset.getTokensList()
         with open('./cache/saved_tokens_'+ now_suffix + '.pkl', 'wb') as handle:
             pickle.dump(tokens, handle)
+            pickle.dump(tokensList, handle)
         with open('./output/saved_tokens_'+ now_suffix + '.pkl', 'wb') as handle:
             pickle.dump(tokens, handle)
+            pickle.dump(tokensList, handle)
 
     if nWords == 0:
         print '[Debugging]: Get no tokens!'
