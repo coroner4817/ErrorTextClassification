@@ -10,9 +10,9 @@ Use Word2vec and Neural Networks to classify the error feedback of the passenger
 
 ## Error Text Training Methods
 
-#### <code>nltk.NaiveBayesClassifier</code>, Acc ~ 48%  
-#### <code>Softmax regression</code>, Acc ~ 77%  
-#### <code>Nerual Networks</code>, Acc ~ 97%  
+#### <code>nltk.NaiveBayesClassifier</code> Acc ~ 48%  
+#### <code>Softmax Regression</code> Acc ~ 77%  
+#### <code>Nerual Networks</code> Acc ~ 97%  
 
 ## Reference
 * [Stanford cs224d](http://cs224d.stanford.edu/index.html)
