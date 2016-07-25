@@ -18,6 +18,7 @@ def train_word2vec(dataset):
     iterations = 60000
     CostAndGradient = negSamplingCostAndGradient
     read_cache = True
+    show = False
 
     nWords = 0
     tokens = None
@@ -55,40 +56,46 @@ def train_word2vec(dataset):
         wordVectors, step, mu, update, iterations, now_suffix, None, read_cache, PRINT_EVERY=100)
 
     wordVectors = (wordVectors0[:nWords,:] + wordVectors0[nWords:,:])
+    dataset.setWordVec(wv=wordVectors)
 
-    class_dir = os.path.join('.', 'output', 'class_vec_plot_' + now_suffix + '.png')
-    word_dir = os.path.join('.', 'output', 'word_vec_plot_' + now_suffix + '.png')
+    # show train info
+    if show:
+        class_dir = os.path.join('.', 'output', 'class_vec_plot_' + now_suffix + '.png')
+        word_dir = os.path.join('.', 'output', 'word_vec_plot_' + now_suffix + '.png')
 
-    class_name, class_vec = dataset.getClassVec(wordVectors)
-    visualize(class_name, class_vec, class_dir)
+        class_name, class_vec = dataset.getClassVec(wordVectors)
+        visualize(class_name, class_vec, class_dir)
 
-    visualizeWords = dataset.getFreqTokens()
-    visualizeIdx = [tokens[word] for word in visualizeWords]
-    visualizeVecs = wordVectors[visualizeIdx, :]
-    visualize(visualizeWords, visualizeVecs, word_dir)
+        visualizeWords = dataset.getFreqTokens()
+        visualizeIdx = [tokens[word] for word in visualizeWords]
+        visualizeVecs = wordVectors[visualizeIdx, :]
+        visualize(visualizeWords, visualizeVecs, word_dir)
 
-    train_info = ['date_time='+str(now_suffix)+'\n',
-                  'cost_and_gradient='+str(CostAndGradient.__name__)+'\n',
-                  'dimVectors='+str(dimVectors)+'\n',
-                  'context='+str(C)+'\n',
-                  'update_method='+str(update)+'\n',
-                  'sgd_step='+str(steps)+'\n',
-                  'sgd_mu='+str(mu)+'\n',
-                  'iterations='+str(iterations)+'\n',
-                  'class_min_count='+str(dataset.class_min_count)+'\n',
-                  'token_min_count='+str(dataset.token_min_count)+'\n',
-                  'class_number='+str(len(class_name))+'\n',
-                  'total_tokens='+str(nWords)+'\n',
-                  'freq_tokens_number='+str(len(visualizeWords))+'\n',
-                  'table_size='+str(dataset.tablesize)+'\n',
-                  'cost='+str(cost)+'\n']
-    train_info += log_info
+        train_info = ['date_time='+str(now_suffix)+'\n',
+                      'cost_and_gradient='+str(CostAndGradient.__name__)+'\n',
+                      'dimVectors='+str(dimVectors)+'\n',
+                      'context='+str(C)+'\n',
+                      'update_method='+str(update)+'\n',
+                      'sgd_step='+str(steps)+'\n',
+                      'sgd_mu='+str(mu)+'\n',
+                      'iterations='+str(iterations)+'\n',
+                      'class_min_count='+str(dataset.class_min_count)+'\n',
+                      'token_min_count='+str(dataset.token_min_count)+'\n',
+                      'class_number='+str(len(class_name))+'\n',
+                      'total_tokens='+str(nWords)+'\n',
+                      'freq_tokens_number='+str(len(visualizeWords))+'\n',
+                      'table_size='+str(dataset.tablesize)+'\n',
+                      'cost='+str(cost)+'\n']
+        train_info += log_info
 
-    txt_info = os.path.join('.', 'output', str(now_suffix)+'.txt')
+        txt_info = os.path.join('.', 'output', str(now_suffix)+'.txt')
 
-    with open(txt_info, 'w') as f:
-        f.writelines(train_info)
-    f.close()
+        with open(txt_info, 'w') as f:
+            f.writelines(train_info)
+        f.close()
+
+    return dataset
+
 
 def visualize(visualizeWords, visualizeVecs, filename):
     # zero centering
@@ -100,7 +107,6 @@ def visualize(visualizeWords, visualizeVecs, filename):
 
     # after svd only select the first two value as the coordinate
     coord = temp.dot(U[:,0:2])
-
 
     for i in xrange(len(visualizeWords)):
         plt.text(coord[i,0], coord[i,1], visualizeWords[i],

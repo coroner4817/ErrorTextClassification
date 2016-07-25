@@ -26,6 +26,9 @@ class ParettoDataset:
                 ac_list_useful.append(iAc)
 
         self.useful_ac = ac_list_useful
+        self.useful_ac_dict = dict()
+        for i in range(len(self.useful_ac)):
+            self.useful_ac_dict[self.useful_ac[i]] = i
 
         print '[Info]: Unique ac count: ', len(unique_ac)
         print '[Info]: Selected useful ac count: ', len(ac_list_useful)
@@ -46,7 +49,7 @@ class ParettoDataset:
     def getTestData(self):
         return self.data[self.split_va:self.split_tx]
 
-    def getTokens(self, load_prev, prev_tokens=None, prev_token_list=[]):
+    def getTokens(self, load_prev=False, prev_tokens=None, prev_token_list=None):
         if hasattr(self, "tokens") and self.tokens:
             return self.tokens
 
@@ -74,10 +77,6 @@ class ParettoDataset:
             for i in range(len(tokens_list)):
                 self.tokens[tokens_list[i]] = i
                 self.tokens_list = tokens_list
-
-        # self.tokens_list = []
-        # for iDict in self.tokens:
-        #     self.tokens_list.append(iDict)
 
         self.nTokens = len(self.tokens)
         print '[Info]: Word tokens count: ', self.nTokens
@@ -192,12 +191,8 @@ class ParettoDataset:
         class_vec = np.zeros((len(self.useful_ac), word_vec.shape[1]))
         class_word_count = np.zeros((len(self.useful_ac), 1))
 
-        useful_ac_dict = dict()
-        for i in range(len(self.useful_ac)):
-            useful_ac_dict[self.useful_ac[i]] = i
-
         for (r, ac) in tr_data:
-            idx = useful_ac_dict[ac]
+            idx = self.useful_ac_dict[ac]
             for w in r:
                 try:
                     class_vec[idx, :] += word_vec[self.tokens[w], :]
@@ -206,4 +201,10 @@ class ParettoDataset:
                     pass
 
         return self.useful_ac, class_vec / class_word_count
+
+    def setWordVec(self, wv):
+        self.wordVec = wv
+
+    def getWordVec(self):
+        return self.wordVec
 
