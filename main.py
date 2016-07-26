@@ -9,7 +9,7 @@ from neural_nets import train_nn
 data_train = get_train_data_r_ac(data_folder='train_data', read_cache=True)
 data_pred = get_pred_data_r(data_folder='predict_data', read_cache=True)
 
-dataset = ParettoDataset(data_train)
+dataset = ParettoDataset(data_train, class_min_count=0, token_min_count=0)
 
 # acc ~ 48%
 # train_NaiveBayes(dataset)
@@ -21,5 +21,5 @@ trained_dataset = train_word2vec(dataset)
 
 # acc ~ 97%
 prediction, uncertain_idx = train_nn(trained_dataset, predicted_dataset=data_pred)
-
-# prediction.to_csv('./output/predict.csv')
+prediction.to_csv('./output/predict.csv')
+print "These index's predictions are not confident: ", uncertain_idx

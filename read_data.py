@@ -91,7 +91,8 @@ def get_train_data_r_ac(data_folder, read_cache=True):
 
         if len(frames)>0:
             df = pd.concat(frames)
-            df.to_pickle('./cache/data_r_ac.pkl')
+            if read_cache:
+                df.to_pickle('./cache/data_r_ac.pkl')
             return df
         else:
             print '[Debugging]: Get no data!'
@@ -115,7 +116,8 @@ def get_pred_data_r(data_folder, read_cache=True):
 
         if len(frames)>0:
             df = pd.concat(frames)
-            df.to_pickle('./cache/data_r.pkl')
+            if read_cache:
+                df.to_pickle('./cache/data_r.pkl')
             return df
         else:
             print '[Debugging]: Get no data!'

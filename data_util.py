@@ -4,7 +4,7 @@ import random
 
 
 class ParettoDataset:
-    def __init__(self, ori_data, class_min_count=50, token_min_count=50, split=np.array([0.6, 0.8, 1.0]), tablesize=1000000):
+    def __init__(self, ori_data, class_min_count=50, token_min_count=50, split=np.array([0.7, 0.85, 1.0]), tablesize=1000000):
         self.class_min_count = class_min_count
         self.token_min_count = token_min_count
         self.tablesize = tablesize

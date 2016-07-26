@@ -3,6 +3,7 @@ from keras.models import Sequential, model_from_json
 from keras.layers.core import Dense, Dropout, Activation
 from keras.optimizers import SGD, Adam, RMSprop
 from keras.utils import np_utils
+from read_data import get_train_data_r_ac
 import os, datetime, glob
 import numpy as np
 import pandas as pd
@@ -86,12 +87,18 @@ def train_nn(dataset, predicted_dataset=None):
         model.add(Dense(1024))
         model.add(Activation('relu'))
         model.add(Dropout(0.2))
+        model.add(Dense(1024))
+        model.add(Activation('relu'))
+        model.add(Dropout(0.2))
+        model.add(Dense(1024))
+        model.add(Activation('relu'))
+        model.add(Dropout(0.2))
         model.add(Dense(nb_classes))
         model.add(Activation('softmax'))
 
         model.summary()
         model.compile(loss='categorical_crossentropy',
-                      optimizer=RMSprop(),
+                      optimizer=Adam(),
                       metrics=['accuracy'])
 
         history = model.fit(trainFeatures, trainLabels,
@@ -121,13 +128,14 @@ def train_nn(dataset, predicted_dataset=None):
         for i in range(len(prediction)):
             max_fir = np.amax(prediction[i])
             max_sec = sorted(prediction[i])[-2]
-            if max_fir / max_sec < 1.5:
+            if max_fir / max_sec < 1.8:
                 uncertain_list.append(i)
-                # print i, max_fir, max_sec, max_fir/max_sec
 
         output_prediction = []
         for p in np.argmax(prediction, axis=1):
             output_prediction.append(dataset.useful_ac[p])
+
+        # data_ori = get_train_data_r_ac(data_folder='predict_data', read_cache=False)
 
         output = pd.DataFrame({
             'r': pred_pd_data,

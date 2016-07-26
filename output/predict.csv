@@ -1,0 +1,407 @@
+,ori_ac,pred_ac,r
+0,NO RESPONSE,NO RESPONSE,auh touchscreen not responding auh m e during l2 check found svdu at 3a touch inop 
+1,DEFECTIVE BUTTON,IFE INOP,tasg ife inop 1k 8h monitor and controller could not work over 5 times reset  not recovered found button faded
+2,IFE INOP,IFE INOP,tasg seat 7a ife inop svdu noresponse
+3,DISPLAY INOP,DISPLAY INOP,tasg seat 5g svdu blank found button faded
+4,NO POWER,NO POWER,tasg seat 2g seat pcu svdu inop no power found connector pin bent found button faded
+5,NO RESPONSE,NO RESPONSE,auh touchscreen not responding
+6,DISPLAY INOP,DISPLAY INOP,auh blank  nil display  minor scratches on lcd
+7,DAMAGED,DAMAGED,car cosmetic damage
+8,DISPLAY INOP,INOP,auh replace svdu
+9,DISPLAY INOP,DISPLAY INOP,display blank
+10,FAILED BOOT,FAILED BOOT,mom svdu not booting
+11,INOP,INOP,auh inop auh 1b  svdu nill display
+12,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touchscreen inop
+13,INOP,INOPERATIVE,tasg fault
+14,DISPLAY INOP,INOP,auh 4a svdu nill display
+15,NO POWER,NO POWER,car no power
+16,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+17,DEFECTIVE BUTTON,DEFECTIVE BUTTON,tasg seat 1d screen touch sensor inop found button faded
+18,DISPLAY INOP,DISPLAY INOP,auh lcd reseted few times but no way it is 1 hour of flt then became operative
+19,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,car touch function inoperative
+20,INOP,UNCLEAR REPAIR CODING DATA,oma ref edd e36292 3 30b remote and touchscreen not working 
+21,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+22,DISPLAY INOP,DISPLAY INOP,auh blank auh on check found svdu inop
+23,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,seat 5h svdu touch function ng
+24,DISPLAY INOP,DISPLAY INOP,tasg 61j screen fault
+25,MOD,MOD,tasg for modification mod 2touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb  please do not demodify by any presb unless certain notice is provided from kal
+26,INOP,INOP,tasg inop
+27,MOD,MOD,tasg for modification mod 2touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb  please do not demodify by any presb unless certain notice is provided from kal
+28,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touchscreen inop
+29,DISPLAY INOP,DISPLAY INOP,seat 1d ife inop display blank found power button marking faded
+30,AVOD INOP ,AVOD INOP ,car no avod
+31,DISPLAY INOP,DISPLAY INOP,auh mnl   bkk  28e blank screen  reset 2x not recovered 
+32,NO POWER,NO POWER,auh no power
+33,IFE INOP,IFE INOP,cwl no ife
+34,DISPLAY INOP,DISPLAY INOP,auh blank on va mode auh auhn sbkk   maint entry  on check found seat 42k screen blank on va mode but ok on vod mode 
+35,DISPLAY INOP,DISPLAY INOP,auh 29j screen frozen 
+36,INOP,INOP,cwl failed operation
+37,INOP,INOP,car inoperative
+38,DAMAGED,DAMAGED,cwl cosmetic damage
+39,DISPLAY INOP,DISPLAY INOP,cwl no picture
+40,DAMAGED,DAMAGED,cwl cosmetic damage
+41,IFE INOP,IFE INOP,tasg sys restart invalid
+42,DAMAGED,DAMAGED,car cosmetic damage
+43,INOP,INOP,cwl inoperative
+44,DISPLAY INOP,INOP,auh svdu inop
+45,DISPLAY INOP,DISPLAY INOP,seat 1k svdu blank power button missing
+46,DISPLAY INOP,DISPLAY INOP,auh blank screen auh svdu inop
+47,DAMAGED,DAMAGED,seat 1a svdu scratch
+48,MOD,MOD,tasg for mod 2 external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+49,AUDIO,AUDIO,cwl no audio 
+50,INOP,INOP,cwl screen unserviceable
+51,DAMAGED,DAMAGED,auh maint entry found 29a svdu housing broken 
+52,DAMAGED,IFE INOP,auh broken pins auh jedman   re  idd seq 31008185  42jk  ife inop 
+53,MOD,MOD,for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal
+54,DISPLAY INOP,DISPLAY INOP,auh touchscreen inop  no blanks
+55,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touchscreen inop  minor scratches
+56,DISPLAY INOP,DISPLAY INOP,auh no display
+57,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,seat 2g svdu touch function ng found screw stuck on heatsink bracket
+58,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+59,INOP,INOPERATIVE,tasg fault
+60,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+61,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+62,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+63,MOD,MOD,for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal
+64,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touchscreen inop
+65,DISPLAY INOP,DISPLAY INOP,tasg black screen
+66,AUDIO,AUDIO,cwl audio inoperative 
+67,MOD,MOD,for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal
+68,MOD,MOD,for modification mod 2 touchscreen replacement campaign in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal
+69,DAMAGED,DAMAGED,cwl cosmetic damage 
+70,DAMAGED,DAMAGED,cwl cosmetic damage
+71,MOD,MOD,for modification mod 2 touchscreen replacement campaign in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal
+72,MOD,MOD,for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal
+73,MAINTENANCE,MAINTENANCE,auh maintenance snag
+74,FAILED BOOT,FAILED BOOT,auh screen keeps rebooting up  no va display
+75,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+76,DAMAGED,DAMAGED,seat 7c svdu connector pin bend found connector pin bent tasg seat 7c svdu connector pin bend  found connector pin bent 
+77,DISPLAY INOP,DISPLAY INOP,seat 7h svdu inop blank tasg seat 7h svdu inoperative blank 
+78,AVOD INOP ,AVOD INOP ,auh not working  no avod oma 20e inop under edd e332933 
+79,DISPLAY INOP,DISPLAY INOP,auh blank screen  broken pins
+80,INTERMITTENT DISPLAY,INTERMITTENT DISPLAY,cwl touch screen intermittent
+81,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+82,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+83,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+84,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+85,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch function inoperative
+86,MOD,MOD,tasg for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+87,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touchscreen inop  minor scracthes
+88,DAMAGED,DISPLAY INOP,tasg screen scratched
+89,INOP,INOP,tasg inop
+90,NO POWER,NO POWER,no screw threadsvdu can not be set up and fastenedzero hour use
+91,MOD,MOD,tasg for modification mod 2touchscreen replacement campaign external normal in case that the unit is required to be modified and orimproved by a certain sb  please do not demodify by any presb unless certain notice is provided from kal
+92,UNCLEAR REPAIR CODING DATA,UNCLEAR REPAIR CODING DATA,auh 
+93,DISPLAY INOP,DISPLAY INOP,black screen unk black screen 
+94,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,seat 7c svdu touch function inop tasg seat 7c svdu touch function inoperative 
+95,DEFECTIVE BUTTON,DEFECTIVE BUTTON,auh faded buttons
+96,DEFECTIVE BUTTON,DEFECTIVE BUTTON,auh faded buttons
+97,UNCLEAR REPAIR CODING DATA,UNCLEAR REPAIR CODING DATA,auh 
+98,IFE INOP,IFE INOP,auh ife inoperative
+99,IFE INOP,IFE INOP,tasg seat 7h ife inoperative even 3 times seat reset 
+100,UNCLEAR REPAIR CODING DATA,UNCLEAR REPAIR CODING DATA,auh 
+101,DISPLAY INOP,INOP,auh svdu replaced
+102,DAMAGED,DAMAGED,auh broken pins
+103,DISPLAY INOP,DISPLAY INOP,auh faulty blank oma screens u s 
+104,DAMAGED,DAMAGED,auh broken pins
+105,INOP,INOP,auh inop
+106,DISPLAY INOP,DISPLAY INOP,auh blank screen
+107,MOD,MOD,for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+108,DISPLAY INOP,NO POWER,blace screen unk blace screen 
+109,DISPLAY INOP,DISPLAY INOP,auh no display
+110,MOD,MOD,for modification mod 2 touchscreen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+111,MOD,MOD,for modification mod 2 touchscreen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain sb please do not demodify by any presb unless certain notice is provided from kal
+112,DISPLAY INOP,DISPLAY INOP,unk screen fault 
+113,MISSING BUTTON,MISSING BUTTON,auh home button missing  minor scratches on lcd  auh 
+114,MOD,MOD,for modification mod 2 touchscreen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal 
+115,MOD,MOD,for modification mod 2 touchscreen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal 
+116,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+117,DAMAGED,DAMAGED,auh broken pins
+118,AVOD INOP ,AVOD INOP ,icn avod inoperative
+119,MOD,MOD,for modification mod 2 touchscreen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal 
+120,DISTORTED DISPLAY ,DISTORTED DISPLAY ,auh display with lines
+121,IFE INOP,IFE INOP,tasg seat 3k ife inoperative 
+122,IFE INOP,IFE INOP,tasg seat 5a ife sometimes inoperative
+123,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl touch screen inoperative
+124,DISPLAY INOP,DISPLAY INOP,tasg screen fault
+125,DISPLAY INOP,DISPLAY INOP,unk screen fault 
+126,INOP,INOP,unk inoperative 
+127,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal
+128,INOP,INOP,unk inoperative 
+129,UNCLEAR REPAIR CODING DATA,INOP,unk invalid 
+130,INOP,INOP,unk inoperative 
+131,INOP,INOP,inop unk inoperative 
+132,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+133,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal
+134,INTERMITTENT DISPLAY,INTERMITTENT DISPLAY,cwl touch screen intermittent
+135,INOP,INOP,unk inoperative 
+136,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal
+137,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal
+138,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal
+139,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal
+140,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal
+141,INOP,INOP,unk inoperative 
+142,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal 
+143,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign case crack in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal
+144,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+145,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+146,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+147,DISPLAY INOP,DISPLAY INOP,unk svdu display inoperative 
+148,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+149,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+150,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch control
+151,DAMAGED,DAMAGED,cwl scratched screen
+152,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch control
+153,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+154,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+155,MISSING BUTTON,MISSING BUTTON,auh seat 3f svdu home button missing auh 
+156,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl no touch screen
+157,DISPLAY INOP,DISPLAY INOP,auh screen blank bent connector pins
+158,MISSING BUTTON,MISSING BUTTON,auh missing button
+159,AVOD INOP ,AVOD INOP ,svdu avod inop unk svdu avod inoperative 
+160,NO POWER,NO POWER,no power  svdu blank   no power  svdu blank 
+161,DISPLAY INOP,DISPLAY INOP,car inoperative blank screen
+162,NO POWER,NO POWER,tasg uservice bulletin jack no power 
+163,DISPLAY INOP,DISPLAY INOP,auh svdu blank
+164,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch screen inoperative minor scratches
+165,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,tasg seat 1d svdu touch function inoperative 
+166,INOP,INOP,car inoperative
+167,DISPLAY INOP,DISPLAY INOP,auh no display
+168,DISPLAY INOP,DISPLAY INOP,car no video dark screen
+169,DISPLAY INOP,DISPLAY INOP,unk 31d screen fault 
+170,DISPLAY INOP,DISPLAY INOP,auh svdu blank
+171,DISPLAY INOP,DISPLAY INOP,car no picture
+172,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+173,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+174,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch screen inoperative
+175,DISPLAY INOP,INOP,oma 30b svdu inop
+176,MOD,MOD,for modification mod 2 touchscreen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain sbplease do not demodify by any presb unless certain notice is provided from kal sb requirementrev
+177,DISPLAY INOP,DISPLAY INOP,auh blank on va ok on vod
+178,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+179,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+180,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+181,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+182,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+183,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+184,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,car no touch function
+185,AVOD INOP ,AVOD INOP ,cwl faols vid anouncement test
+186,INOP,INOP,auh inoperative oma during maint chk 20j svdu found inop
+187,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch function  cover cracked  scratch
+188,DISPLAY INOP,DISPLAY INOP,mom svdu blank no booting svdu unserviceable
+189,DISPLAY INOP,DISPLAY INOP,auh blank
+190,INOP,INOPERATIVE,auh unserviceable
+191,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch control
+192,DISPLAY INOP,DISPLAY INOP,auh blank
+193,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,car no touch screen
+194,DISPLAY INOP,DISPLAY INOP,tasg seat 7h display blank 
+195,DAMAGED,DAMAGED,auh broken pin
+196,MISSING BUTTON,MISSING BUTTON,auh button missing
+197,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,tasg touch function inoperative
+198,MISSING BUTTON,MISSING BUTTON,auh button missing
+199,DISPLAY INOP,NO POWER,mom svdu dead config fail
+200,MOD,MOD,tasg for modification modification 2  touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+201,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch control
+202,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+203,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+204,MOD,MOD,tasg for modification modification 2  touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+205,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+206,DISTORTED DISPLAY ,DISTORTED DISPLAY ,tasg seat 7h there is a line in center of display
+207,INOP,INOP,unk screen broken  svdu fault 
+208,DEFECTIVE BUTTON,DAMAGED,tasg seat 1k front cover separated broken found front cover broken and button faded
+209,BITE FAILURE,BITE FAILURE,car tpcu bite failure inoperative
+210,BITE FAILURE,BITE FAILURE,car tpcu bite failure inoperative
+211,DAMAGED,INTERMITTENT DISPLAY,auh dented
+212,FAILED BOOT,FAILED BOOT,mom no booting
+213,DAMAGED,DAMAGED,tasg seat 1d svdu cover broken found front panel broken
+214,DISPLAY INOP,DISPLAY INOP,display blank
+215,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+216,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+217,DISPLAY INOP,DISPLAY INOP,unk 61f black screen 
+218,SERVICE BULLETIN REQUEST,SERVICE BULLETIN REQUEST,tasg svdu video pa not showed external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+219,INOP,INOP,auh inoperative
+220,NO RESPONSE,NO COMMUNICATION,auh no response
+221,INOP,INOP,car inoperative
+222,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch function
+223,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch function inoperative
+224,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,car touch screen inoperative
+225,AVOD INOP ,AVOD INOP,tasg avod inoperative ph2 inoperative external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+226,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+227,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+228,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+229,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+230,IFE INOP,IFE INOP,cwl no ife
+231,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+232,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision  foc  attrition base
+233,DISPLAY INOP,DISPLAY INOP,tasg seat 7h display blank 
+234,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch screen function intermittent minor scratches on screen
+235,IFE INOP,IFE INOP,tasg seat 3c ife du inoperative not recovered  found connector pin bent and button faded 
+236,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,car no touch function
+237,DISPLAY INOP,DISPLAY INOP,auh monitor blank display  minor scratches on the lcd  auh 
+238,DISPLAY INOP,DISPLAY INOP,cwl no picture 
+239,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch control
+240,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch control
+241,DAMAGED,DAMAGED,auh broken pin
+242,SOFTWARE DOWNLOAD FAILURE,SOFTWARE DOWNLOAD FAILURE,cwl would not load
+243,DISPLAY INOP,DISPLAY INOP,cwl blank screen 
+244,DISTORTED DISPLAY ,DISTORTED DISPLAY ,tasg seat 1a svdu inoperative  display has white line  there is minor scratch on lcd 
+245,NO RESPONSE,NO RESPONSE,auh not responding
+246,NO RESPONSE,NO RESPONSE,auh not responding
+247,IFE INOP,IFE INOP,cwl no ife
+248,IFE INOP,IFE INOP,cwl no ife
+249,INOP,INOP,unk svdu fault 
+250,INTERMITTENT DISPLAY,INTERMITTENT DISPLAY,auh intermittent
+251,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl svdu 6e touch screen inoperative
+252,BFS,BFS,auh fail on fit
+253,MAINTENANCE,SERVICE BULLETIN REQUEST,cwl please inspect and test
+254,DISPLAY INOP,INOP,unk svdu can not work 
+255,IFE INOP,IFE INOP,tasg seat 3d ife not stable sometimes freeze  found button faded  there is minor scratch on lcd 
+256,DISPLAY INOP,DISPLAY INOP,cwl screen frozen
+257,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch control
+258,MISSING BUTTON,MISSING BUTTON,unk missing button 
+259,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl screen inoperative bent pins
+260,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision foc attrition base
+261,MOD,MOD,tasg for modification 2  external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+262,MOD,MOD,tasg for modification 2 touch screen campaign external normal  in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+263,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+264,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+265,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+266,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision foc attrition base
+267,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision foc attrition base
+268,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision foc attrition base
+269,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision foc attrition base
+270,DAMAGED,DAMAGED,cwl screen damaged
+271,INOP,INOP,unk fault 
+272,INOP,INOP,unk 31k fault 
+273,INOP,IFE INOP,tasg seat 7h ife monitor not shown reset but not recovered 
+274,INOP,INOP,tasg seat 7k svdu inoperative  found connector pin damaged 
+275,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,tasg seat 2c svdu touch func ng  but touch function was ok when push at upper right of display frame home button stucked 
+276,BFS,BFS,cwl unserviceable from stock
+277,DISPLAY INOP,INOP,auh repetitive defect
+278,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh no touch function
+279,MISSING BUTTON,MISSING BUTTON,auh inoperative missing button
+280,MISSING BUTTON,MISSING BUTTON,auh missing home button
+281,INOP,INOP,cwl handset inoperative
+282,INOP,INOP,cwl uservice bulletin module inoperative
+283,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+284,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+285,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch screen not responding
+286,DAMAGED,DAMAGED,auh broken housing
+287,DISPLAY INOP,DISPLAY INOP,tasg svdu turned black out not recovered 1g  found scratch on display  power and home button marking faded 
+288,DAMAGED,DAMAGED,cwl bent pin
+289,DISPLAY INOP,DISPLAY INOP,tasg blank external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+290,DISPLAY INOP,INOP,tasg seat 5a svdu not on demand mode 
+291,IFE INOP,IFE INOP,unk 31ac ife fault 
+292,INOP,INOP,oma not done in real world  transaction done to pull out unit s n v0904797 which is currently at store as serviceable to match servo with real world
+293,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch screen inoperative
+294,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch screen inoperative
+295,DISPLAY INOP,DISPLAY INOP,auh no display
+296,SOFTWARE DOWNLOAD FAILURE,SOFTWARE DOWNLOAD FAILURE,cwl screen not downloading
+297,INOP,INOP,cwl unreachable
+298,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,tasg seat 1d svdu touch func ng  failure condition found connector pin bent 
+299,NO POWER,NO POWER,tasg nil power 
+300,DAMAGED,DAMAGED,tasg lcd cracked
+301,DISPLAY INOP,DISPLAY INOP,tasg display inoperative blank  ecb elec pwr reset twice but same condition 
+302,DISPLAY INOP,DISPLAY INOP,auh blank
+303,DISPLAY INOP,DISPLAY INOP,cwl unreachable no picture
+304,BFS,BFS,cwl bad from stock 
+305,MOD,MOD,tasg for modification 2 touch screen campaign  in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+306,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+307,INOP,INOP,unk 31c can not be used after a reset 
+308,IFE INOP,IFE INOP,cwl unserviceable on lev 1 no ife
+309,DAMAGED,DAMAGED,cwl cracked screen
+310,MISSING BUTTON,MISSING BUTTON,auh missing button
+311,DISTORTED DISPLAY ,DISTORTED DISPLAY ,auh distorted display
+312,DAMAGED,DAMAGED,cwl pin bent
+313,INOP,INOP,auh inoperative
+314,INOP,INOP,auh svdu inoperative
+315,NO POWER,NO POWER,mom no power
+316,DAMAGED,DAMAGED,tasg seat 7c display rear cover has crack  found rear cover crack 
+317,DISPLAY INOP,DISPLAY INOP,auh blank
+318,DISPLAY INOP,DISPLAY INOP,auh blank
+319,IFE INOP,IFE INOP,unk 61d ife inoperative 
+320,DISPLAY INOP,DISPLAY INOP,auh blank display
+321,MOD,MOD,tasg for modification 2 touch screen replacement campaign  monitor scratch in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+322,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+323,DISPLAY INOP,DISPLAY INOP,auh no video dark screen
+324,INOP,INOP,svdu u s
+325,DISPLAY INOP,DISPLAY INOP,auh no display broken pin
+326,INOP,INOP,cwl inoperative
+327,DISPLAY INOP,DISPLAY INOP,auh blank screen
+328,DISPLAY INOP,DISPLAY INOP,unk nrc2015b6538001200161g screen fault 
+329,INOP,DISPLAY INOP,unk 61a screen can not fix 
+330,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+331,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+332,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+333,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+334,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+335,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+336,IFE INOP,IFE INOP,cwl no ife
+337,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,tasg touch function inoperative  power and home button marking faded  there is minor scratch on lcd 
+338,INOP,INOP,cwl unreachable
+339,INOP,INOP,auh svdu repetitive fault
+340,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch screen inoperative minor scratches
+341,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl touch screen inoperative
+342,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl touch screen unserviceable
+343,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl touch screen inoperative
+344,NETWORK FAILURE,IP SEQ FAILED,cwl svdu no ip address ip 0 0 0 0
+345,DISPLAY INOP,DISPLAY INOP,svdu blank  opn u s
+346,DISPLAY INOP,DEFECTIVE TOUCH SCREEN,cwl touch screen function
+347,IFE INOP,IFE INOP,tasg ife inoperative audio inoperative
+348,DAMAGED,DAMAGED,tasg seat 1d svdu corner edge crack  found cover damage crack  there is minor scratch on lcd  please functional check and comment to workshop report 
+349,NO RESPONSE,NO RESPONSE,auh not responding
+350,DISPLAY INOP,DISPLAY INOP,auh blank screen
+351,DISPLAY INOP,DISPLAY INOP,unk 31c touch screen fault 
+352,DAMAGED,DAMAGED,tasg seat 1k svdu corner edge crack  found corner edge damage crack home button waded and display scratch 
+353,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl no touch screen function
+354,DISPLAY INOP,DISPLAY INOP,tasg seat 1c display blank 
+355,IFE INOP,IFE INOP,cwl screen unserviceable no ife
+356,UNCLEAR REPAIR CODING DATA,UNCLEAR REPAIR CODING DATA,auh 
+357,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,tasg seat 7h ife wont control by touch pnl  touch function only n  g found power button waded 
+358,INOP,INOP,cwl unreachable
+359,DISPLAY INOP,DISPLAY INOP,auh blank screen
+360,INOP,INOP,cwl unserviceable will not reset
+361,DISTORTED DISPLAY ,DISTORTED DISPLAY ,mom svdu display discolored  config ok
+362,AVOD INOP ,DISPLAY INOP,auh screen wont play
+363,MAINTENANCE,MAINTENANCE,upgrade
+364,AUDIO,AUDIO,auh audio failure
+365,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,tasg touch screen inoperative external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal service bulletin requirement revision foc attrition baseiction base
+366,DISTORTED DISPLAY ,INOP,cwl inoperative inoperative offline
+367,INOP,INOP,cwl unreachable
+368,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+369,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement revision foc at
+370,DISPLAY INOP,DISPLAY INOP,auh no display
+371,DISPLAY INOP,DISPLAY INOP,tasg seat 1c monitor blank 
+372,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,cwl reason for removal touch screen unserviceable
+373,DISPLAY INOP,DISPLAY INOP,tasg seat 7a seat display blank connector pin bent  connector pin bent 
+374,UNCLEAR REPAIR CODING DATA,INOP,cwl reason for removal filed operation
+375,DISPLAY INOP,DISPLAY INOP,auh inoperative goes blank
+376,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal service bulletin requirement revision foc at
+377,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision foc attrition baseiction base
+378,MOD,MOD,tasg modification 2 touch screen replacement campaign  in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal service bulletin requirement revision foc attrition baseiction base
+379,NETWORK FAILURE,UNCLEAR REPAIR CODING DATA,cwl reason for removal not detected 
+380,UNCLEAR REPAIR CODING DATA,BLANK SCREEN,ecrs blank
+381,DISPLAY INOP,DISPLAY INOP,tasg seat 1c display blank
+382,DISPLAY INOP,DISPLAY INOP,auh inoperative no display
+383,INOP,IFE INOP,tasg p m sometimes inoperative 
+384,DISPLAY INOP,DISPLAY INOP,unk 32l video screen fault 
+385,DISPLAY INOP,DISPLAY INOP,unk screen display inoperative 
+386,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement
+387,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement
+388,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement
+389,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement
+390,DAMAGED,DAMAGED,cwl reason for removal shroud damage 
+391,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign
+392,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement
+393,AUDIO,AUDIO,tasg audio one ear found svdu connector  10 pin bent at 5g 
+394,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement
+395,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement
+396,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign external normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not demodify by any preservice bulletin unless certain notice is provided from kal  service bulletin requirement revision foc attrition base
+397,DISPLAY INOP,DISPLAY INOP,auh blank intermittently
+398,NO POWER,NO POWER,auh no power scratches
+399,DAMAGED,DAMAGED,unk svdu crack but function normal 
+400,MOD,MOD,tasg for modification modification 2 touch screen replacement campaign normal in case that the unit is required to be modified and or improved by a certain service bulletin please do not de modify by any pre service bulletin unless certain notice is provided from kal  service bulletin requirement revision
+401,UNCLEAR REPAIR CODING DATA,BLANK SCREEN,ecrs blank
+402,INOP,INOP,auh inoperative
+403,DISPLAY INOP,DISPLAY INOP,unk svdu display inoperative 
+404,DISPLAY INOP,DISPLAY INOP,unk screen fault 
+405,DEFECTIVE TOUCH SCREEN,DEFECTIVE TOUCH SCREEN,auh touch screen inoperative

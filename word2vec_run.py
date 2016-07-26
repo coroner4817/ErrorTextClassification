@@ -9,7 +9,7 @@ def train_word2vec(dataset):
     random.seed(datetime.datetime.now())
     now_suffix = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M")
 
-    # dimVectors = len(dataset.useful_ac) if len(dataset.useful_ac) > 10 else 10
+    # config
     dimVectors = 15
     C = 5
     update = 'nesterov'
