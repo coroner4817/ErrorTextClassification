@@ -82,10 +82,7 @@ def prepare_data(sub_dataset, dataset):
     return features, labels
 
 
-def prepare_predict_data(predicted_data, dataset):
-    data = []
-    for (linenum, line) in predicted_data.iterrows():
-        data.append((line['r']))
+def prepare_predict_data(data, dataset):
 
     dimVec=dataset.getWordVec().shape[1]
     tokens=dataset.getTokens()

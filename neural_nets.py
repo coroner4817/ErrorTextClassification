@@ -5,6 +5,7 @@ from keras.optimizers import SGD, Adam, RMSprop
 from keras.utils import np_utils
 import os, datetime, glob
 import numpy as np
+import pandas as pd
 
 
 def save_model(model):
@@ -108,14 +109,31 @@ def train_nn(dataset, predicted_dataset=None):
         pass
 
     if predicted_dataset is not None:
-        predictFeatures = prepare_predict_data(predicted_dataset, dataset)
+        pred_pd_data = []
+        for (linenum, line) in predicted_dataset.iterrows():
+            pred_pd_data.append((line['r']))
+
+        predictFeatures = prepare_predict_data(pred_pd_data, dataset)
         predictFeatures = predictFeatures.astype('float32')
         prediction = model.predict(predictFeatures, batch_size=1024)
+
+        uncertain_list = []
+        for i in range(len(prediction)):
+            max_fir = np.amax(prediction[i])
+            max_sec = sorted(prediction[i])[-2]
+            if max_fir / max_sec < 1.5:
+                uncertain_list.append(i)
+                # print i, max_fir, max_sec, max_fir/max_sec
 
         output_prediction = []
         for p in np.argmax(prediction, axis=1):
             output_prediction.append(dataset.useful_ac[p])
 
-        return output_prediction
+        output = pd.DataFrame({
+            'r': pred_pd_data,
+            'pred_ac': output_prediction
+        })
+
+        return output, uncertain_list
     else:
-        return None
+        return None, None

@@ -73,7 +73,7 @@ def get_data_from_file(file_name, _get_ac):
         return False, []
 
 
-def get_data_r_ac(data_folder, read_cache=True):
+def get_train_data_r_ac(data_folder, read_cache=True):
 
     if read_cache and os.path.exists('./cache/data_r_ac.pkl'):
         print '[Status]: Load trained data from cache...'
@@ -98,7 +98,7 @@ def get_data_r_ac(data_folder, read_cache=True):
             sys.exit(1)
 
 
-def get_data_r(data_folder, read_cache=True):
+def get_pred_data_r(data_folder, read_cache=True):
     if read_cache and os.path.exists('./cache/data_r.pkl'):
         print '[Status]: Load predicted data from cache...'
         return read_pickle('./cache/data_r.pkl')
