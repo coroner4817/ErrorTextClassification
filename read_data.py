@@ -73,25 +73,49 @@ def get_data_from_file(file_name, _get_ac):
         return False, []
 
 
-def get_data_r_ac(data_folder, get_ac, read_cache=True):
+def get_data_r_ac(data_folder, read_cache=True):
 
     if read_cache and os.path.exists('./cache/data_r_ac.pkl'):
-        print '[Status]: Load data from cache...'
+        print '[Status]: Load trained data from cache...'
         return read_pickle('./cache/data_r_ac.pkl')
     else:
         frames = []
         count = 1
         for iFile in os.listdir(data_folder):
             if iFile.endswith(".xlsm"):
-                suc, data_pd = get_data_from_file(os.path.join(data_folder, iFile), get_ac)
+                suc, data_pd = get_data_from_file(os.path.join(data_folder, iFile), True)
                 if suc:
                     frames.append(data_pd)
-                    print '[Status]: Finish reading xlsm file ', count
+                    print '[Status]: Finish reading train xlsm file ', count
                     count += 1
 
         if len(frames)>0:
             df = pd.concat(frames)
             df.to_pickle('./cache/data_r_ac.pkl')
+            return df
+        else:
+            print '[Debugging]: Get no data!'
+            sys.exit(1)
+
+
+def get_data_r(data_folder, read_cache=True):
+    if read_cache and os.path.exists('./cache/data_r.pkl'):
+        print '[Status]: Load predicted data from cache...'
+        return read_pickle('./cache/data_r.pkl')
+    else:
+        frames = []
+        count = 1
+        for iFile in os.listdir(data_folder):
+            if iFile.endswith(".xlsm"):
+                suc, data_pd = get_data_from_file(os.path.join(data_folder, iFile), False)
+                if suc:
+                    frames.append(data_pd)
+                    print '[Status]: Finish reading predict xlsm file ', count
+                    count += 1
+
+        if len(frames)>0:
+            df = pd.concat(frames)
+            df.to_pickle('./cache/data_r.pkl')
             return df
         else:
             print '[Debugging]: Get no data!'

@@ -40,9 +40,9 @@ def train_word2vec(dataset):
         with open('./cache/saved_tokens_'+ now_suffix + '.pkl', 'wb') as handle:
             pickle.dump(tokens, handle)
             pickle.dump(tokensList, handle)
-        with open('./output/saved_tokens_'+ now_suffix + '.pkl', 'wb') as handle:
-            pickle.dump(tokens, handle)
-            pickle.dump(tokensList, handle)
+        # with open('./output/saved_tokens_'+ now_suffix + '.pkl', 'wb') as handle:
+        #     pickle.dump(tokens, handle)
+        #     pickle.dump(tokensList, handle)
 
     if nWords == 0:
         print '[Debugging]: Get no tokens!'

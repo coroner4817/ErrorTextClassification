@@ -82,6 +82,26 @@ def prepare_data(sub_dataset, dataset):
     return features, labels
 
 
+def prepare_predict_data(predicted_data, dataset):
+    data = []
+    for (linenum, line) in predicted_data.iterrows():
+        data.append((line['r']))
+
+    dimVec=dataset.getWordVec().shape[1]
+    tokens=dataset.getTokens()
+    wordVectors=dataset.getWordVec()
+
+    nSize = len(data)
+    features = np.zeros((nSize, dimVec))
+
+    for i in range(nSize):
+        sent = data[i]
+        words = [w for w in nltk.word_tokenize(sent) if w in tokens]
+        features[i, :] = getSentenceFeature(tokens, wordVectors, words)
+
+    return features
+
+
 def train_softmaxreg(dataset):
     # config
     regularization = 0.0

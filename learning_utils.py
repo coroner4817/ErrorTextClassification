@@ -106,8 +106,8 @@ def sgd(f, x0, step, mu, update, iterations, suffix, postprocessing = None, useS
             step *= 0.5
             steps.append(step)
 
-        if iter == iterations and useSaved:
-            save_params_final(iter, x, suffix)
+        # if iter == iterations and useSaved:
+        #     save_params_final(iter, x, suffix)
 
     return x, expcost, steps, log_info
 

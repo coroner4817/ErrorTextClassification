@@ -1,9 +1,10 @@
-from softmax_regression import prepare_data
+from softmax_regression import prepare_data, prepare_predict_data
 from keras.models import Sequential, model_from_json
 from keras.layers.core import Dense, Dropout, Activation
 from keras.optimizers import SGD, Adam, RMSprop
 from keras.utils import np_utils
 import os, datetime, glob
+import numpy as np
 
 
 def save_model(model):
@@ -15,8 +16,8 @@ def save_model(model):
     open(os.path.join('.', 'cache', json_name), 'w').write(json_string)
     model.save_weights(os.path.join('.', 'cache', weight_name), overwrite=True)
 
-    open(os.path.join('.', 'output', json_name), 'w').write(json_string)
-    model.save_weights(os.path.join('.', 'output', weight_name), overwrite=True)
+    # open(os.path.join('.', 'output', json_name), 'w').write(json_string)
+    # model.save_weights(os.path.join('.', 'output', weight_name), overwrite=True)
 
 
 def read_model(json_name, weight_name):
@@ -25,11 +26,11 @@ def read_model(json_name, weight_name):
     return model
 
 
-def train_nn(dataset):
+def train_nn(dataset, predicted_dataset=None):
     # config
     batch_size = 1024
     nb_classes = len(dataset.useful_ac)
-    nb_epoch = 800
+    nb_epoch = 500
     read_cache = True
 
     trainFeatures, trainLabels = prepare_data(sub_dataset=dataset.getTrainData(),dataset=dataset)
@@ -89,7 +90,7 @@ def train_nn(dataset):
 
         model.summary()
         model.compile(loss='categorical_crossentropy',
-                      optimizer=Adam(),
+                      optimizer=RMSprop(),
                       metrics=['accuracy'])
 
         history = model.fit(trainFeatures, trainLabels,
@@ -105,3 +106,16 @@ def train_nn(dataset):
         save_model(model)
     else:
         pass
+
+    if predicted_dataset is not None:
+        predictFeatures = prepare_predict_data(predicted_dataset, dataset)
+        predictFeatures = predictFeatures.astype('float32')
+        prediction = model.predict(predictFeatures, batch_size=1024)
+
+        output_prediction = []
+        for p in np.argmax(prediction, axis=1):
+            output_prediction.append(dataset.useful_ac[p])
+
+        return output_prediction
+    else:
+        return None
